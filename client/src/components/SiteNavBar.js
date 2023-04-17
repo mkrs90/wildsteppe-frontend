@@ -13,10 +13,9 @@ function SiteNavBar() {
                             <img id="site_name" className="mt-2" to='/' src={SiteName} alt='site name'/>
                         </div>
                     <ul className="navbar-nav ml-auto">
-                        <Link to="/" className='nav-item me-5 mt-2'>Home</Link>
-                        <Link to="/about" className='nav-item me-5 mt-2'>About Us</Link>
-                        <Link to="/" className='nav-item btn btn-outline-success me-5'>Sign Up</Link>
-                        <Link to="/login" className='nav-item btn btn-outline-success me-5'>Log In</Link>
+                        <Link to="/" id='navBarItems' className='nav-item me-5 mt-3'>Home</Link>
+                        <Link to="/about" id='navBarItems' className='nav-item me-5 mt-3'>About Us</Link>
+                        <Link to="/login" id="loginButton" className='nav-item btn me-5'>Sign In</Link>
                     </ul>
                 </div>                
             </nav>

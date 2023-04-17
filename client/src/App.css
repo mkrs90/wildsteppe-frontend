@@ -1,0 +1,29 @@
+#site_logo {
+    height: 50px;
+}
+
+#site_name {
+    height: 40px;
+}
+
+#navbar {
+    background-color: white;
+}
+
+/* ---------------Home Page-------------- */
+
+#splash_image {
+    height: 700px;
+    background: rgba(253, 253, 253, 0.3) url(./Images/Splash_Image.jpg);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#searchBox {
+    background: rgb(253, 253, 253, 0.8);
+}

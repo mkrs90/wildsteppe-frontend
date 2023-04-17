@@ -1,0 +1,78 @@
+#site_logo {
+    height: 50px;
+}
+
+#site_name {
+    height: 40px;
+}
+
+#navbar {
+    background-color: white;
+}
+
+#navBarItems {
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+#loginButton {
+    font-size: 20px;
+    font-weight: bold;
+    color: black !important;
+    font-family: 'Titillium Web', sans-serif !important; 
+    padding: 0.5em 1em !important;
+    margin: 0.25em !important;
+    border-radius: 1em !important;
+    border: none !important;
+    outline: none !important;
+    background: #80A260 !important;
+}
+
+#loginButton:hover {
+    background: #FE7134 !important;
+}
+
+/* ---------------Home Page-------------- */
+
+#splash_image {
+    height: 700px;
+    background: rgba(253, 253, 253, 0.048) url(./Images/Splash_Image.jpg);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#searchBox {
+    background: rgb(253, 253, 253, 0.8);
+}
+
+#search_bar {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#tag_line {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: #FE7134;
+}
+
+#register_tagline{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    color: #4E613A;
+}
+
+#register_tagline:hover{
+    color: #FE7134;
+    font-size: 22px;
+}
+

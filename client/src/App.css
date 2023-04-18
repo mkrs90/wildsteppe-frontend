@@ -21,7 +21,7 @@
 #loginButton {
     font-size: 20px;
     font-weight: bold;
-    color: black !important;
+    color: white !important;
     font-family: 'Titillium Web', sans-serif !important; 
     padding: 0.5em 1em !important;
     margin: 0.25em !important;
@@ -33,6 +33,7 @@
 
 #loginButton:hover {
     background: #FE7134 !important;
+    color: black !important;
 }
 
 /* ---------------Home Page-------------- */
@@ -78,6 +79,13 @@
     font-weight: bold;
 }
 
+#trail_list_title {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+    color: #4E613A;
+    font-weight: bold;
+}
+
 /* -------------------Login Page------------------------- */
 
 #login_page {
@@ -112,4 +120,32 @@
     font-size: 30px;
     color: #4E613A;
     font-weight: bold;
+}
+
+
+/* -----------------------About Page---------------------------- */
+
+#about {
+    height: 890px;
+    background: url(./Images/orange_mountain_sunset.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#about_page {
+    background: rgb(253, 253, 253, 0.8);
+}
+
+#about_header {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 50px;
+    color: #4E613A;
+    font-weight: bold;
+}
+
+#about_page p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
 }

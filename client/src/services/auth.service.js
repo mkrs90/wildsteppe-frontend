@@ -5,19 +5,19 @@ import {
   } from './auth.constants';
   
   import request from './api.request';
-  
+  // import at top - AuthService.method()
   class AuthService {
     constructor() {
       this.login = this.login.bind(this);
     }
-  
-    async login(username, password) {
+  // AuthService.login(email, password)
+    async login(email, password) {
       try {
         const response = await request({
           url: LOGIN_ENDPOINT,
           method: 'POST',
           data: {
-            username,
+            email,
             password,
           },
         });
@@ -29,11 +29,11 @@ import {
         return error.response;
       }
     }
-  
+  //AuthService.logout()
     logout() {
       localStorage.removeItem('user');
     }
-  
+  //AuthService.register(username, email, password, firstname, lastname)
     async register({
       username,
       email,
@@ -54,7 +54,7 @@ import {
           },
         });
   
-        await this.login(username, password);
+        await this.login(email, password);
       } catch (error) {
         return error.response;
       }

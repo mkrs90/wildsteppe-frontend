@@ -22,15 +22,15 @@ function Home() {
                 </div>
                 <div id='tag_line' className='mb-5' >Take A Step Into The Wild</div>
                 <div id='search_bar' className='input-group mt-4'>
-                    <input type="text" class="form-control" onKeyDown={handleKeyDown} placeholder="Enter City or Trail Name..."/>
-                    <div class="input-group-append">
-                        <button class="btn btn-secondary" type="button">
-                            <i class="fa fa-search"></i>
+                    <input type="text" className="form-control" onKeyDown={handleKeyDown} placeholder="Enter City or Trail Name..."/>
+                    <div className="input-group-append">
+                        <button className="btn btn-secondary" type="button">
+                            <i className="fa fa-search"></i>
                         </button>
                     </div>   
                 </div>
                 <div className='mt-2' >
-                    <Link to="/register" id="register_tagline">JOIN WILDSTEPPE COMMUNITY TODAY!</Link>
+                    <Link to="/register" id="register_tagline">JOIN WILDSTEPPE COMMUNITY TODAY!</Link> 
                 </div>
             </div>
         </div>

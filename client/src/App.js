@@ -1,28 +1,28 @@
-import './App.css';
-import SiteNavBar from './components/SiteNavBar';
+import "./App.css";
+import { useState } from "react";
+import SiteNavBar from "./components/SiteNavBar";
 import { Routes, Route } from "react-router-dom";
-import Home from './pages/Home'
-import About from './pages/About';
-import TrailPage from './pages/TrailPage'
-import Login from './pages/Login'
-import Register from './pages/Register';
-import Profile from './pages/Profile';
+import Home from "./pages/Home";
+import About from "./pages/About";
+import TrailPage from "./pages/TrailPage";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Profile from "./pages/Profile";
 
 function App() {
-    return (
-        <>
-            <SiteNavBar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/trailPage" element={<TrailPage />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path='/register' element={<Register />} />
-                    <Route path='/profile' element={<Profile />} />
-                </Routes>
-            
-        </>
-    );
+  return (
+    <>
+      <SiteNavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/trail/:id" element={<TrailPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;

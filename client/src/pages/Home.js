@@ -1,3 +1,4 @@
+import TrailList from '../components/TrailList';
 import SiteLogo from '../Images/wildsteppe_logo.png';
 import SiteName from '../Images/Wildsteppe_name.png';
 import { Link } from "react-router-dom";
@@ -12,6 +13,7 @@ function Home() {
     }
 
     return (
+        <>
         <div id="splash_image" className='p-5'>
             <div id='searchBox' className='text-center m-5 p-3'>
                 <div>
@@ -34,6 +36,8 @@ function Home() {
                 </div>
             </div>
         </div>
+        <TrailList />
+        </>
     )
 }
 

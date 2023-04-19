@@ -21,7 +21,7 @@
 #loginButton {
     font-size: 20px;
     font-weight: bold;
-    color: black !important;
+    color: white !important;
     font-family: 'Titillium Web', sans-serif !important; 
     padding: 0.5em 1em !important;
     margin: 0.25em !important;
@@ -33,6 +33,7 @@
 
 #loginButton:hover {
     background: #FE7134 !important;
+    color: black !important;
 }
 
 /* ---------------Home Page-------------- */
@@ -78,6 +79,17 @@
     font-weight: bold;
 }
 
+/* #trail_list_header {
+    
+} */
+
+#trail_list_title {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+    color: #4E613A;
+    font-weight: bold;
+}
+
 /* -------------------Login Page------------------------- */
 
 #login_page {
@@ -112,4 +124,73 @@
     font-size: 30px;
     color: #4E613A;
     font-weight: bold;
+}
+
+
+/* -----------------------About Page---------------------------- */
+
+#about {
+    height: 890px;
+    background: url(./Images/orange_mountain_sunset.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#about_page {
+    background: rgb(253, 253, 253, 0.8);
+}
+
+#about_header {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 50px;
+    color: #4E613A;
+    font-weight: bold;
+}
+
+#about_page p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+
+/* -----------------------Trail Page------------------------- */
+
+#trailPage_detailsCard {
+    background-color: rgb(241, 241, 241);
+}
+
+#trailPage_Card {
+    height: 400px;
+    background: rgba(0, 0, 0, 0.25) url(./Images/trail_test_photo.jpg) no-repeat center center fixed;
+    background-blend-mode: darken;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#trailPage_header {
+    font-family: 'Titillium Web', sans-serif;
+    color: #fefcee;
+}
+
+#trail_title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#trail_title_subtext {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#trailPage_description {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+
+#trailPage_description div {
+    font-weight: bold;
+    font-size: 30px;
 }

@@ -1,5 +1,4 @@
 import "./App.css";
-import { useState } from "react";
 import SiteNavBar from "./components/SiteNavBar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";

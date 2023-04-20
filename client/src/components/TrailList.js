@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import trailPhoto from '../Images/trail_test_photo.jpg';
 
 const BASE_URL =
@@ -51,6 +51,7 @@ export const TrailCard = ({ trail }) => {
         <img src={trailPhoto} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{trail.name}</h5>
+          <h6>Difficulty: {trail.difficulty.name}</h6>
           {/* <p className="card-text"></p> */}
           <NavLink to={`/trail/${trail.id}`} id="loginButton" className="btn">
             See the Trail

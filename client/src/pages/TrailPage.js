@@ -32,7 +32,18 @@ export default function TrailPage() {
   );
 }
 
+
 export const TrailDetailCard = ({ trail }) => {
+// console.log(trail.difficulty.name)
+  // let trailDiff = JSON.parse(trail);
+// console.log(trailDiff.difficulty.name);
+// let level = trail.difficulty
+// const map1 = new Map()
+// map1.set(level.id, level.name)
+// console.log(map1)
+// console.log(trail.difficulty.map(data => (data.name)))
+// console.log(trail.difficulty?.name)
+
   return (
     <>
       <div className="container-fluid" id="trailPage_Card">
@@ -45,7 +56,7 @@ export const TrailDetailCard = ({ trail }) => {
           </div>
           <div id="trail_title_subtext" className="ms-5">
             <div>Trial Rating</div>
-            <div>Difficulty: Easy</div>
+            <div>Difficulty: {trail.difficulty?.name}</div>
             <div>{trail.location}</div>
           </div>
         </div>

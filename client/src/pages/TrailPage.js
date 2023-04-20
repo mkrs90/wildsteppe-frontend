@@ -34,15 +34,6 @@ export default function TrailPage() {
 
 
 export const TrailDetailCard = ({ trail }) => {
-// console.log(trail.difficulty.name)
-  // let trailDiff = JSON.parse(trail);
-// console.log(trailDiff.difficulty.name);
-// let level = trail.difficulty
-// const map1 = new Map()
-// map1.set(level.id, level.name)
-// console.log(map1)
-// console.log(trail.difficulty.map(data => (data.name)))
-// console.log(trail.difficulty?.name)
 
   return (
     <>

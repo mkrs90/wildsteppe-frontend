@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-// import { API_URL, TRAIL_ENDPOINT } from "../services/auth.constants";
-
-const BASE_URL =
-  "https://8000-mkrs90-wildsteppebacken-vpz7io4uhwz.ws-us94.gitpod.io/api";
+import { API_URL } from "../services/auth.constants";
 
 export default function TrailPage() {
   const { id } = useParams();
@@ -13,7 +10,7 @@ export default function TrailPage() {
     const getTrailDetails = async () => {
       let config = {
         url: `/trails/${id}`,
-        baseURL: BASE_URL,
+        baseURL: API_URL,
         method: "get",
       };
       let response = await axios.request(config);
@@ -34,41 +31,47 @@ export default function TrailPage() {
 
 
 export const TrailDetailCard = ({ trail }) => {
-// console.log(trail.difficulty.name)
-  // let trailDiff = JSON.parse(trail);
-// console.log(trailDiff.difficulty.name);
-// let level = trail.difficulty
-// const map1 = new Map()
-// map1.set(level.id, level.name)
-// console.log(map1)
-// console.log(trail.difficulty.map(data => (data.name)))
-// console.log(trail.difficulty?.name)
-
   return (
     <>
-      <div className="container-fluid" id="trailPage_Card">
-        <div
-          id="trailPage_header"
-          className="position-absolute bottom-50 start-0 ms-5"
-        >
-          <div id="trail_title" className="ms-5">
+      <div className="container-fluid text-center" id="trailPage_Card">
+        <div id="trailPage_header" className="position-relative">
+          <div id="trail_title" >
             {trail.name}
           </div>
-          <div id="trail_title_subtext" className="ms-5">
-            <div>Trial Rating</div>
-            <div>Difficulty: {trail.difficulty?.name}</div>
-            <div>{trail.location}</div>
+          <div id="trail_title_subtext" className="row">
+            <div className="col-4">Trail Rating</div>
+            <div className="col-4">Difficulty: {trail.difficulty?.name}</div>
+            <div className="col-4">{trail.location}</div>
           </div>
         </div>
       </div>
-      <div>
-        <div id="trailPage_description" className="mt-5 p-2">
-          <div className="border-bottom">Description</div>
-          <p className="mt-2">{trail.description}</p>
+      <div className="row">
+        <div className=" col-9 mt-5 p-2">
+          <div id="trailPage_text">
+            <div id="trailPage_title" className=" ps-3 border-bottom">Description</div>
+            <p className="mt-5 pb-5 ps-3 pe-3">{trail.description}</p>
+          </div>
+          <div id="trailPage_comment_section">
+            <div id="trailPage_title" className=" ps-3 border-bottom">Reviews</div>
+          </div>
         </div>
-        <div>
-          <div>Distance: {trail.distance}miles</div>
-          <div>Estimated Duration: {trail.duration}hrs</div>
+        <div className="col-3 border-start mt-5 p-2">
+          <div id="trailPage_title" className="border-bottom">Trail Stats</div>
+          <div id="trailPage_text">
+            <div className="mt-5 mb-3">Distance: {trail.distance}miles</div>
+            <div className="mb-3">Estimated Time: {trail.duration}hrs</div>
+            <div>Dogs Allowed? {(trail.pets_allowed ? 'Yes' : 'No')}</div>
+          </div>
+          <div className="mt-5">
+            <div id="trailPage_title" className="border-bottom">Activities</div>
+            <div className="mt-3">
+              {
+                trail.activities?.map(activity => (
+                  <div key={activity.id} id="trailPage_text" className="mb-2">{activity.name}</div>
+                ))
+              }
+            </div>
+          </div>
         </div>
       </div>
     </>

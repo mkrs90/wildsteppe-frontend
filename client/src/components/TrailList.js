@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import trailPhoto from '../Images/trail_test_photo.jpg';
-
-const BASE_URL =
-  "https://8000-mkrs90-wildsteppebacken-vpz7io4uhwz.ws-us94.gitpod.io/api";
+import { API_URL } from "../services/auth.constants";
 
 function TrailList() {
   const [trails, setTrails] = useState([]);
@@ -13,7 +11,7 @@ function TrailList() {
     const getTrails = async () => {
       let config = {
         url: "/trails/",
-        baseURL: BASE_URL,
+        baseURL: API_URL,
         method: "get",
       };
       let response = await axios.request(config);

@@ -15,7 +15,7 @@ function TrailList() {
         method: "get",
       };
       let response = await axios.request(config);
-      const limitedData = response.data.slice(0, 3);
+      const limitedData = response.data.slice(0, 4);
       setTrails(limitedData);
     };
     getTrails();
@@ -28,7 +28,7 @@ function TrailList() {
           <p id="trail_list_title" className="">
             Trails Near You
           </p>
-          <p className="float-end float-top">See More...</p>
+          {/* <p className="float-end float-top">See More...</p> */}
         </div>
       </div>
       <div className="container mt-3">

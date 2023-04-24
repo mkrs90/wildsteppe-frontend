@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { API_URL } from "../services/auth.constants";
 import MakeComment from "../components/MakeComment";
+import ViewComments from "../components/ViewComments";
 
 export default function TrailPage() {
   const { id } = useParams();
@@ -56,6 +57,7 @@ export const TrailDetailCard = ({ trail }) => {
             <div id="trailPage_title" className=" ps-3 border-bottom">Reviews</div>
             <div>Comments/reviews go here.</div>
             <MakeComment trailId={trail.id}/>
+            <ViewComments trailId={trail.id}/>
           </div>
         </div>
         <div className="col-3 border-start mt-5 p-2">

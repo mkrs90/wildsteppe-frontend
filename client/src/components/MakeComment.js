@@ -64,8 +64,8 @@ function MakeComment({ trailId }) {
   return (
     <div>
       {!state.currentUser && (
-        <Link to="/login" id="loginButton" className="nav-item btn me-5">
-          Sign In To Leave Comment
+        <Link to="/login" id="loginButton" className="nav-item btn me-5 float-end">
+          Sign In To Leave Review
         </Link>
       )}
       {state.currentUser && (

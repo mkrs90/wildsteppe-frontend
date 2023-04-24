@@ -246,3 +246,28 @@
     font-size: 30px;
     font-weight: bold;
 }
+
+/* comment section */
+
+#comment_container {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#comment_textBold {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#comment_text {
+    font-size: 20px;
+}
+
+#userImg {
+    background-color: #80A260;
+    border-radius: 50%;
+    height: 40px;
+}
+
+#rating_star {
+    color: #FE7134;
+}

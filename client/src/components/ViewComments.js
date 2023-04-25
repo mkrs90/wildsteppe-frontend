@@ -45,7 +45,6 @@ export const CommentCard = ({ review }) => {
         }
         return stars;
     }
-    // <i class="fa-solid fa-star" style="color: #1d4790;"></i>
 
     return (
         <div id="comment_container" className="border-bottom">

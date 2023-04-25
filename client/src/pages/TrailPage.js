@@ -55,7 +55,6 @@ export const TrailDetailCard = ({ trail }) => {
           </div>
           <div id="trailPage_comment_section">
             <div id="trailPage_title" className=" ps-3 border-bottom">Reviews</div>
-            <div>Comments/reviews go here.</div>
             <MakeComment trailId={trail.id}/>
             <ViewComments trailId={trail.id}/>
           </div>

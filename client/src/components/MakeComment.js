@@ -57,12 +57,12 @@ function MakeComment({ trailId }) {
     //     console.log(error);
     //   });
     // console.log("Review Submitted Maybe?");
-    // window.location.href = `/trail/${trailId}`;
-    // window.location.reload(true);
+    window.location.href = `/trail/${trailId}`;
+    window.location.reload(true);
   };
 
   return (
-    <div>
+    <div className="border-bottom">
       {!state.currentUser && (
         <Link to="/login" id="loginButton" className="nav-item btn me-5 float-end">
           Sign In To Leave Review
@@ -72,19 +72,15 @@ function MakeComment({ trailId }) {
         <>
           <form onSubmit={handleSubmitReview}>
             <div>
-              <label htmlFor="text">Review of Trail:</label>
-              <input
-                className="mb-3 ms-1"
-                type="text"
-                id="text"
-                name="text"
-                onChange={(e) => setText(e.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="rating">Rating:</label>
-              <input
+              <label htmlFor="rating" id="reviewTitle" className="float-start ms-3 mt-4">Rating:</label>
+              <div className="rating rating2 float-start ms-2 mt-3">
+		            <a href="#5" title="Give 5 stars" onClick={((e) => setRating("5"))}>★</a>
+		            <a href="#4" title="Give 4 stars" onClick={((e) => setRating("4"))}>★</a>
+		            <a href="#3" title="Give 3 stars" onClick={((e) => setRating("3"))}>★</a>
+		            <a href="#2" title="Give 2 stars" onClick={((e) => setRating("2"))}>★</a>
+		            <a href="#1" title="Give 1 star" onClick={((e) => setRating("1"))}>★</a>
+	            </div>
+              {/* <input
                 className="mb-3 me-4 ms-1"
                 type="number"
                 min="1"
@@ -96,12 +92,12 @@ function MakeComment({ trailId }) {
                   console.log("changed!", e.target.value);
                   setRating(e.target.value);
                 }}
-              />
+              /> */}
             </div>
-            <div>
-              <label htmlFor="dateVisited">Date:</label>
+            <div  className="float-end">
+              <label htmlFor="dateVisited" id="reviewTitle" className="mt-4">Date Visited:</label>
               <input
-                className="mb-3 me-4 ms-1"
+                className="mb-3 me-4 ms-1 mt-4"
                 type="date"
                 id="dateVisited"
                 name="dateVisited"
@@ -109,11 +105,24 @@ function MakeComment({ trailId }) {
                 onChange={(e) => setDateVisited(e.target.value)}
               />
             </div>
+            <div>
+              <div>
+                <textarea
+                className="mb-3 ms-1"
+                type="text"
+                id="reviewTextBody"
+                name="text"
+                placeholder="Review the Trail..."
+                onChange={(e) => setText(e.target.value)}
+                required
+              />
+              </div>
+            </div>
             <input
               type="submit"
               value="Submit Trail Review"
-              id="SubmitBtn"
-              className="btn btn-primary mb-5"
+              id="loginButton" 
+              className="nav-item btn"
             />
           </form>
         </>

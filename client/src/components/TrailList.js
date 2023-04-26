@@ -3,6 +3,7 @@ import axios from "axios";
 import { NavLink } from "react-router-dom";
 // import trailPhoto from '../Images/trail_test_photo.jpg';
 import { API_URL } from "../services/auth.constants";
+import StarAverage from "./starAverage";
 
 function TrailList() {
   const [trails, setTrails] = useState([]);

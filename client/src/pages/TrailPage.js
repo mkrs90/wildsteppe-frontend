@@ -49,9 +49,9 @@ export const TrailDetailCard = ({ trail }) => {
             {trail.name}
           </div>
           <div id="trail_title_subtext" className="row">
-            <div className="col-4"><StarAverage trailId={trail.id} /></div>
-            <div className="col-4">Difficulty: {trail.difficulty?.name}</div>
-            <div className="col-4">{trail.location}</div>
+            <div className="col-4 mt-1">Difficulty: {trail.difficulty?.name}</div>
+            <div className="col-4 mt-1"><StarAverage trailId={trail.id} /></div>
+            <div className="col-4 mt-1">{trail.location}</div>
           </div>
         </div>
       </div>

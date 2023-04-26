@@ -36,7 +36,7 @@ function SiteNavBar() {
                         }
                         {state.currentUser && 
                             <>
-                                <Link to="/profile" id='navBarItems' className='nav-item me-5 mt-3'>Profile</Link>
+                                {/* <Link to="/profile" id='navBarItems' className='nav-item me-5 mt-3'>Profile</Link> */}
                                 <Link onClick={handleLogout} id="loginButton" className="nav-item btn me-5">Sign Out</Link>
                             </>
                         } 

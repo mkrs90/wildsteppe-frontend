@@ -5,6 +5,7 @@ import { API_URL } from "../services/auth.constants";
 import MakeComment from "../components/MakeComment";
 import ViewComments from "../components/ViewComments";
 import StarAverage from "../components/starAverage";
+import Map from "../components/Map";
 
 export default function TrailPage() {
   const { id } = useParams();
@@ -68,6 +69,7 @@ export const TrailDetailCard = ({ trail }) => {
           </div>
         </div>
         <div className="col-3 border-start mt-5 p-2">
+          <div><Map /></div>
           <div id="trailPage_title" className="border-bottom">Trail Stats</div>
           <div id="trailPage_text">
             <div className="mt-5 mb-3">Distance: {trail.distance}miles</div>

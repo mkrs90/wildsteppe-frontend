@@ -3,6 +3,7 @@ import { useGlobalState } from "../context/GlobalState";
 import { Link } from "react-router-dom";
 import { COMMENT_ENDPOINT } from "../services/auth.constants";
 import request from "../services/api.request";
+import Rating from 'react-rating';
 
 function MakeComment({ trailId }) {
   const [state, dispatch] = useGlobalState();
@@ -72,14 +73,18 @@ function MakeComment({ trailId }) {
         <>
           <form onSubmit={handleSubmitReview}>
             <div>
-              <label htmlFor="rating" id="reviewTitle" className="float-start ms-3 mt-4">Rating:</label>
-              <div className="rating rating2 float-start ms-2 mt-3">
+              <div >
+                <label htmlFor="rating" id="reviewTitle" className="float-start ms-3 mt-4">Rating:</label>
+              <Rating onClick={setRating} initialRating={rating} id="fastars" className="ms-1 mt-4" emptySymbol="fa fa-star-o fa-2x"
+  fullSymbol="fa fa-star fa-2x"/>
+              </div>
+              {/* <div className="rating rating2 float-start ms-2 mt-3">
 		            <a href="#5" title="Give 5 stars" onClick={((e) => setRating("5"))}>★</a>
 		            <a href="#4" title="Give 4 stars" onClick={((e) => setRating("4"))}>★</a>
 		            <a href="#3" title="Give 3 stars" onClick={((e) => setRating("3"))}>★</a>
 		            <a href="#2" title="Give 2 stars" onClick={((e) => setRating("2"))}>★</a>
 		            <a href="#1" title="Give 1 star" onClick={((e) => setRating("1"))}>★</a>
-	            </div>
+	            </div> */}
               {/* <input
                 className="mb-3 me-4 ms-1"
                 type="number"
@@ -94,8 +99,8 @@ function MakeComment({ trailId }) {
                 }}
               /> */}
             </div>
-            <div  className="float-end">
-              <label htmlFor="dateVisited" id="reviewTitle" className="mt-4">Date Visited:</label>
+            <div  >
+              <label htmlFor="dateVisited" id="reviewTitle" className="mt-4 ms-3">Date Visited:</label>
               <input
                 className="mb-3 me-4 ms-1 mt-4"
                 type="date"

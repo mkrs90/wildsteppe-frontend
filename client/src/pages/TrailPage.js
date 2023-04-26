@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { API_URL } from "../services/auth.constants";
 import MakeComment from "../components/MakeComment";
 import ViewComments from "../components/ViewComments";
+import StarAverage from "../components/starAverage";
 
 export default function TrailPage() {
   const { id } = useParams();
@@ -33,15 +34,22 @@ export default function TrailPage() {
 
 
 export const TrailDetailCard = ({ trail }) => {
+
+
   return (
     <>
-      <div className="container-fluid text-center" id="trailPage_Card">
+      <div className="container-fluid text-center" id="trailPage_Card" style={{
+        backgroundImage: `url(${trail.image})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
+      }}>
         <div id="trailPage_header" className="position-relative">
           <div id="trail_title" >
             {trail.name}
           </div>
           <div id="trail_title_subtext" className="row">
-            <div className="col-4">Trail Rating</div>
+            <div className="col-4"><StarAverage trailId={trail.id} /></div>
             <div className="col-4">Difficulty: {trail.difficulty?.name}</div>
             <div className="col-4">{trail.location}</div>
           </div>

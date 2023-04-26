@@ -25,7 +25,7 @@ const Login = () => {
           currentUserToken: resp.access,
           currentUser: data
         })
-        navigate('/profile')
+        navigate('/')
       });
   }
 
@@ -33,7 +33,7 @@ const Login = () => {
     <div id="login_page" className="container-fluid p-5">
       <div id="login_form_div" className="c-form text-center m-5 p-5'">
         <div>
-          <img id="" src={SiteLogo} alt='site logo' />
+          <img src={SiteLogo} alt='site logo' />
         </div>
         <div id="login_form_title" className="mb-5">Lets go explore!</div>
         <form onSubmit={handleLogin}>

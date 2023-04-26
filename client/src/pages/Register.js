@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import AuthService from "../services/auth.service";
+import SiteLogo from '../Images/wildsteppe_logo.png';
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -21,12 +22,17 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     AuthService.register(user)
-    window.location.href = '/profile';
+    window.location.href = '/';
     window.location.reload(true);
   }
 
   return (
-    <div className="c-form">
+    <div id="register_page" className="container-fluid p-5">
+    <div id="register_form_div" className="c-form text-center m-5 p-5">
+    <div>
+          <img src={SiteLogo} alt='site logo' />
+        </div>
+        <div id="login_form_title" className="mb-5">Join the community!</div>
       <form onSubmit={handleRegister}>
         <div>
           <label htmlFor="username">Username:</label>
@@ -36,6 +42,7 @@ const Register = () => {
             name="username"
             onChange={(e) => handleChange('username', e.target.value)}
             required
+            className="mb-3 ms-1"
           />
         </div>
         <div>
@@ -46,6 +53,7 @@ const Register = () => {
             name="email"
             onChange={(e) => handleChange('email', e.target.value)}
             required
+            className="mb-3 me-4 ms-1"
           />
         </div>
         <div>
@@ -57,6 +65,7 @@ const Register = () => {
             minLength="8"
             required
             onChange={(e) => handleChange('password', e.target.value)}
+            className="mb-3 me-4 ms-1"
           />
         </div>
         <div>
@@ -67,7 +76,9 @@ const Register = () => {
             name="password"
             minLength="8"
             required
-            onChange={(e) => handleChange('passwordConf', e.target.value)} />
+            onChange={(e) => handleChange('passwordConf', e.target.value)} 
+            className="mb-3 me-4 ms-1"
+            />
         </div>
         <div>
           <label htmlFor="firstName">First Name:</label>
@@ -75,7 +86,7 @@ const Register = () => {
             type="text"
             id="firstName"
             name="fname"
-          
+            className="mb-3 me-4 ms-1"
             required
             onChange={(e) => handleChange('firstName', e.target.value)} />
         </div>
@@ -86,11 +97,15 @@ const Register = () => {
             id="lastName"
             name="lname"
             required
-            onChange={(e) => handleChange('lastName', e.target.value)} />
+            onChange={(e) => handleChange('lastName', e.target.value)} 
+            className="mb-3 me-4 ms-1"
+            />
         </div>
         <input
           type="submit"
           value="Register"
+          id="loginButton"
+          className="btn mb-5"
           disabled={(
             user.password &&
             user.password.length >= 8 &&
@@ -101,6 +116,7 @@ const Register = () => {
           ) ? false : true}
         />
       </form>
+    </div>
     </div>
   )
 

@@ -69,7 +69,7 @@ export const TrailDetailCard = ({ trail }) => {
           </div>
         </div>
         <div className="col-3 border-start mt-5 p-2">
-          <div><Map /></div>
+          <div><Map trail={trail} /></div>
           <div id="trailPage_title" className="border-bottom">Trail Stats</div>
           <div id="trailPage_text">
             <div className="mt-5 mb-3">Distance: {trail.distance}miles</div>

@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
-// import trailPhoto from '../Images/trail_test_photo.jpg';
 import { API_URL } from "../services/auth.constants";
-import StarAverage from "./starAverage";
+
 
 function TrailList() {
   const [trails, setTrails] = useState([]);
@@ -27,9 +26,8 @@ function TrailList() {
       <div className="container mt-5">
         <div id="trail_list_header" className="border-bottom">
           <p id="trail_list_title" className="">
-            Trails Near You
+            See the trails
           </p>
-          {/* <p className="float-end float-top">See More...</p> */}
         </div>
       </div>
       <div className="container-fluid mt-3">

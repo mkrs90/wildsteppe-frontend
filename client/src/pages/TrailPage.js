@@ -25,7 +25,7 @@ export default function TrailPage() {
   }, [id]);
 
   return (
-    <div id="trailPage_detailsCard" className="container m-5 border border-dark p-2">
+    <div id="trailPage_detailsCard" className="container d-flex align-items-center justify-content-center mt-5 mb-5 border border-dark p-2">
       <div>
         <TrailDetailCard key={trailDetails.id} trail={trailDetails} />
       </div>
@@ -70,9 +70,9 @@ export const TrailDetailCard = ({ trail }) => {
         </div>
         <div className="col-3 border-start mt-5 p-2">
           <div><Map trail={trail} /></div>
-          <div id="trailPage_title" className="border-bottom">Trail Stats</div>
+          <div id="trailPage_title" className="border-bottom mt-3">Trail Stats</div>
           <div id="trailPage_text">
-            <div className="mt-5 mb-3">Distance: {trail.distance}miles</div>
+            <div className="mt-3 mb-3">Distance: {trail.distance}miles</div>
             <div className="mb-3">Estimated Time: {trail.duration}hrs</div>
             <div>Dogs Allowed? {(trail.pets_allowed ? 'Yes' : 'No')}</div>
           </div>

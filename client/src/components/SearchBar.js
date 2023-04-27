@@ -4,7 +4,7 @@ function SearchBar({ setResults }) {
     const [input, setInput] = useState("");
 
     const fetchData = (value) => {
-        fetch('https://8000-mkrs90-wildsteppebacken-vpz7io4uhwz.ws-us95.gitpod.io/api/trails/').then((response) => response.json()).then(json => {
+        fetch('https://8000-mkrs90-wildsteppebacken-vpz7io4uhwz.ws-us96.gitpod.io/api/trails/').then((response) => response.json()).then(json => {
             const results = json.filter((trail) => {
                 return value && trail && trail.name && trail.name.toLowerCase().includes(value)
             });
@@ -23,7 +23,7 @@ function SearchBar({ setResults }) {
         <div id="search_bar" className="">
             <i className="fa fa-search" id="searchBar_icon"></i>
         <input
-            placeholder="Enter City or Trail Name..."
+            placeholder="Know a Trail Name? Enter it here..."
             value={input}
             onChange={(e) => handleChange(e.target.value)}
         />

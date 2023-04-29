@@ -4,7 +4,7 @@ function SearchBar({ setResults }) {
     const [input, setInput] = useState("");
 
     const fetchData = (value) => {
-        fetch('https://8000-mkrs90-wildsteppebacken-vpz7io4uhwz.ws-us96.gitpod.io/api/trails/').then((response) => response.json()).then(json => {
+        fetch('https://wildsteppe.ue.r.appspot.com/api/trails/').then((response) => response.json()).then(json => {
             const results = json.filter((trail) => {
                 return value && trail && trail.name && trail.name.toLowerCase().includes(value)
             });

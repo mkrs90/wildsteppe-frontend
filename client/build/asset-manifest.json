@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bfd4c060.css",
+    "main.js": "/static/js/main.03a5c05f.js",
+    "static/media/Forest_Stream.jpg": "/static/media/Forest_Stream.035d68be552e2745ef10.jpg",
+    "static/media/orange_mountain_sunset.png": "/static/media/orange_mountain_sunset.97b87e113457b86d534c.png",
+    "static/media/sunrise_flowers.jpeg": "/static/media/sunrise_flowers.3bba1269e01282329164.jpeg",
+    "static/media/Splash_Image.jpg": "/static/media/Splash_Image.8a729950b386aab46ca1.jpg",
+    "static/media/wildsteppe_logo.png": "/static/media/wildsteppe_logo.bdb72687d10e4b78434a.png",
+    "static/media/Wildsteppe_name.png": "/static/media/Wildsteppe_name.d49fa33011f51049fd13.png",
+    "index.html": "/index.html",
+    "main.bfd4c060.css.map": "/static/css/main.bfd4c060.css.map",
+    "main.03a5c05f.js.map": "/static/js/main.03a5c05f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bfd4c060.css",
+    "static/js/main.03a5c05f.js"
+  ]
+}

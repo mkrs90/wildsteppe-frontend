@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react';
+import Weather from '../components/Weather';
 // import { useParams } from "react-router-dom";
 import axios from 'axios';
 
 function ParkPage() {
     const myURL = new URL(window.location.href);
-    console.log(myURL);
     const wholeCode = myURL.pathname;
-    console.log(wholeCode);
     const parkCode = wholeCode.slice(-4)
-    console.log(parkCode);
     const [parkDetail, setParkDetail] = useState([]);
+    const [parkImage, setParkImage] = useState([]);
     // curl -X GET "https://developer.nps.gov/api/v1/parks?parkCode=acad&limit=1&start=0&q=Acadia&api_key=uHGK2HcvCNT8QFSWFMVIFDwEMKogRc0hwHbihNJ7"
     // curl -X GET "https://developer.nps.gov/api/v1/parks?limit=1&start=0&q=Acadia&api_key=uHGK2HcvCNT8QFSWFMVIFDwEMKogRc0hwHbihNJ7"
     useEffect(() => {
@@ -28,6 +27,7 @@ function ParkPage() {
       
               if (response.data && response.data.data && response.data.data.length > 0) {
                 setParkDetail(response.data.data[0]);
+                setParkImage(response.data.data[0].images)
               }
             } catch (error) {
               console.log('Error:', error);
@@ -36,14 +36,12 @@ function ParkPage() {
       
           getParkDetail();
         }, [parkCode]);
-    console.log(parkDetail);
-        let parkImg = parkDetail?.images;
-        let parkImgOne = parkImg[0];
+        console.log(parkImage);
 
     return (
         <>
       <div className="container-fluid text-center" id="trailPage_Card" style={{
-        backgroundImage: `url(${parkImgOne.url})`,
+        backgroundImage: `url(${parkImage[0]?.url})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
@@ -52,23 +50,21 @@ function ParkPage() {
           <div id="trail_title" >
             {parkDetail.name}
           </div>
-          <div id="trail_title_subtext" className="row">
-            {/* <div className="col-4 mt-1">Difficulty: {parkDetail.name}</div> */}
-            {/* <div className="col-4 mt-1"><StarAverage trailId={trail.id} /></div> */}
-            {/* <div className="col-4 mt-1">{trail.location}</div> */}
-          </div>
         </div>
       </div>
+      <div id="trail_title_subtext" className="row">
+          {/* <div className="text-center mt-1">{parkDetail.addresses[0].city}, {parkDetail.addresses[0].stateCode}</div> */}
+          </div>
       <div className="row">
         <div className=" col-9 mt-5 p-2">
           <div id="trailPage_text">
             <div id="trailPage_title" className=" ps-3 border-bottom">Description</div>
             <p className="mt-5 pb-5 ps-3 pe-3">{parkDetail.description}</p>
           </div>
-          <div id="trailPage_comment_section">
-            <div id="trailPage_title" className=" ps-3 border-bottom">Reviews</div>
-            {/* <MakeComment trailId={trail.id}/> */}
-            {/* <ViewComments trailId={trail.id}/> */}
+          <div id="trailPage_text">
+            <div id="trailPage_title" className=" ps-3 border-bottom">Weather</div>
+            <p className="mt-5 pb-5 ps-3 pe-3">{parkDetail.weatherInfo}</p>
+            <Weather />
           </div>
         </div>
         <div className="col-3 border-start mt-5 p-2">

@@ -53,8 +53,7 @@ function ParkList() {
           <img src={park.images[0].url} id="parkCard_img" alt="..." />
           <div className="card-footer mt-auto">
             <h5 className="card-title">{park.name}</h5>
-            <p>{park.addresses[0].city}, {park.addresses[0].stateCode}</p>
-            <p>{park.parkCode}</p>
+            <h6 id="">{park.addresses[0].city}, {park.addresses[0].stateCode}</h6>
             <NavLink to={`/park/${park.parkCode}`} id="loginButton" className="btn">
               See the Park
             </NavLink>

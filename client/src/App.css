@@ -262,6 +262,8 @@
     font-weight: bold;
     background-color: #4E613A;
     height: 40px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #fefcee;
 }
 
 #trailPage_text {

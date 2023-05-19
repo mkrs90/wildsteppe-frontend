@@ -139,6 +139,14 @@
     font-weight: bold;
 }
 
+/* ------------Park Cards -------------- */
+
+#parkCard_img {
+    object-fit: cover;
+    width: 260px;
+    height: 260px;
+}
+
 /* -------------------Login Page------------------------- */
 
 #login_page {

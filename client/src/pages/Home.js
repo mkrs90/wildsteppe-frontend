@@ -5,6 +5,7 @@ import SiteLogo from '../Images/wildsteppe_logo.png';
 import SiteName from '../Images/Wildsteppe_name.png';
 import { Link } from "react-router-dom";
 import SearchResultsList from '../components/SearchResultsList';
+import ParkList from '../components/nationalParkList';
 
 function Home() {
     
@@ -29,6 +30,7 @@ function Home() {
             </div>
         </div>
         <TrailList />
+        <ParkList />
         </>
     )
 }

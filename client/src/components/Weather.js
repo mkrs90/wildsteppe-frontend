@@ -7,7 +7,7 @@ function Weather() {
     const [weather, setWeather] = useState(null);
 
     useEffect(() => {
-        getWeatherData(42303)
+        getWeatherData(47150)
     }, []);
 
     function getWeatherData(zip) {
@@ -30,10 +30,18 @@ function Weather() {
           });
       };
       
+      function kelvinToFahrenheit(kelvin) {
+        const fahrenheit = (kelvin - 273.15) * 9/5 + 32;
+        let roundFahrenheit = Math.round(fahrenheit * 10) / 10;
+        return roundFahrenheit;
+      }
 
     return (   
         <div>
-            Weather: {weather?.name}
+            Current weather for {weather?.name}
+            <p>{kelvinToFahrenheit(weather.main?.feels_like)}</p>
+            <p>High {kelvinToFahrenheit(weather.main?.temp_max)} / Low {kelvinToFahrenheit(weather.main?.temp_min)}</p>
+            <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}/>
         </div>
     )
 }
